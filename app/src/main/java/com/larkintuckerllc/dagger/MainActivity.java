@@ -14,11 +14,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        TextView mDateTextView = findViewById(R.id.tvDate);
+        TextView dateTextView = findViewById(R.id.tvDate);
         ((MyApplication) getApplication())
                 .getMyComponent()
                 .inject(MainActivity.this);
-        mDateTextView.setText((new Date(mMyExample.getDate())).toString());
+        dateTextView.setText((new Date(mMyExample.getDate())).toString());
     }
 
 }
